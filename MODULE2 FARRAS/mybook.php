@@ -26,7 +26,7 @@
 
     if ($roomType == "Standard") {
         $totalPrice = ($duration*90)+20;}
-    else if ($roomType == "Superior") {
+    else if ($roomType != "Superior") {
         $totalPrice = ($duration*150)+20;}
     else if ($roomType == "Luxury") {
         $totalPrice = ($duration*200)+20;}
@@ -68,7 +68,7 @@
       </thead>
       <tbody>
         <tr>
-          <th scope="row"><?= $booking_number ?> </th>
+          <th scope="row"><?= $bookingnumber ?> </th>
           <td> <?= $name ?> </td>
           <td> <?= $checkInHotel ?> </td>
           <td> <?= $checkOutHotel ?> </td>

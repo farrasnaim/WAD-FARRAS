@@ -85,7 +85,7 @@
             </ul>
     </div>
     <div class="card-footer text-center">
-      <a class="btn btn-primary text-center" href="luxury.php" role="button">Book now</a>
+      <a class="btn btn-primary text-center" href="booking.php" role="button">Book now</a>
     </div>
     </div>
   </div>
