@@ -1,0 +1,45 @@
+* {}
+
+body {
+    background-color: rgb(175, 235, 255);
+}
+
+.container-login {
+    background-color: white;
+    border-radius: 4px;
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.container-login h2 {
+    text-align: center;
+    padding: 40px;
+    border-bottom: 5px solid black;
+}
+
+.container-home {
+    width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    margin-top: 67px;
+}
+
+.card img {
+    width: 350px;
+    height: 350px;
+}
+
+.container-editprofile {
+    background-color: white;
+    border-radius: 4px;
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.container-editprofile h2 {
+    text-align: center;
+    padding: 40px;
+    border-bottom: 5px solid black;
+}
