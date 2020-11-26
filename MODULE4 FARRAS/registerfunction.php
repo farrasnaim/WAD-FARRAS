@@ -7,7 +7,7 @@ $nohp = $_POST['nohp'];
 $password = $_POST['password'];
 $register = mysqli_query($connect , "INSERT INTO `user`(`nama`, `email`, `no_hp`, `password`) VALUES ('$name','$email','$nohp','$password') " );
  if ($register){
-     setcookie("username",$name);
+     setsession("username",$name);
      setcookie("register","true");
      header("location:home.php");
  }

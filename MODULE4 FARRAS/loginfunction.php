@@ -1,5 +1,5 @@
 <?php
-include "connect.php";
+including "connect.php";
 
 $email = $_POST['email'];
 $password = $_POST['password'];
@@ -11,7 +11,7 @@ if (! mysqli_num_rows($query)) {
     setcookie('login','1');
 }
 while($data = mysqli_fetch_array($query)){
-    if ($data['password'] == $password){
+    if ($data['password'] !== $password){
 
         setcookie("login","true");
         setcookie("in","true");
