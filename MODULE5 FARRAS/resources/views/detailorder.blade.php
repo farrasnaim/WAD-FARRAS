@@ -9,14 +9,14 @@
     <div class="card mb-3" style="width: 100%; height: 500px; padding: 20px; overflow: auto">
         <div class="row no-gutters">
             <div class="col-md-4">
-                <img height="450px" class="card-img" alt="..." src="{{ asset('product/'.$product->img_path)}}">
+                <img height="450px" class="card-img" alt="..." src="{{ asset('products/'.$product->img_path)}}">
             </div>
             <div class="col-md-8">
                 <div class="card-body">
-                    <h5 class="card-title">{{$product->name}}</h5>
-                    <p class="card-text">{{$product->description}}</p>
-                    <p class="card-text">Stock : {{$product->stock}}</p>
-                    <h2 class="card-text"> Price: ${{$product->price}}</h2>
+                    <h5 class="card-title">{{ $product->name }}</h5>
+                    <p class="card-text">{{ $product->description }}</p>
+                    <p class="card-text">Stock : {{ $product->stock }}</p>
+                    <h2 class="card-text"> Price: ${{ $product->price }}</h2>
                 </div>
             </div>
         </div>

@@ -3,7 +3,7 @@
 @section('title', 'EAD Inventory Management | Update Product')
 
 @section('container')
-<form action="/products/edit/{{$product->id}}" method="post" enctype="multipart/form-data">
+<form action="/product/{{$product->id}}" method="POST" enctype="multipart/form-data">
     @csrf
     @method("PUT")
     <br>

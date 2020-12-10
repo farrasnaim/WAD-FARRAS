@@ -43,27 +43,6 @@ class productsController extends Controller
         $products->save();
         return redirect()->route('product.index');
     }
-    // {
-    //     $products = new products();
-    //     $products->name = $request->input('name');
-    //     $products->price = $request->input('price');
-    //     $products->description = $request->input('description');
-    //     $products->stock = $request->input('stock');
-        
-
-    //     if($request->hasFile('img_path')){
-    //         $file = $request->file('img_path');
-    //         $extension = $file->getClientOriginalExtension();
-    //         $filename = time() . "." . $extension;
-    //         $file->move('uploads/image/',$filename);
-    //         $products->img_path = $filename;
-    //     } else {
-    //         return $request;
-    //         $products->img_path = "";
-    //     }
-    //     $products->save();
-    //     return redirect()->route('product.index');
-    // }
 
     public function edit(products $products, $id)
     {
@@ -71,9 +50,24 @@ class productsController extends Controller
         return view('updateproducts',['product' => $product]);
     }
 
-    public function update(Request $request, products $products)
+    public function update(Request $request, products $products, $id)
     {
-        //
+        $products = products::find($id);
+        $products->stock = $request->stock;
+        $products->name = $request->name;
+        $products->price = $request->price;
+        $products->description = $request->description;
+        $image = $request->file('image');
+
+        if ($image != null) {
+            $destination = 'products';
+            $newname = time() . "_" . $image->getClientOriginalName();
+            $image->move($destination, $newname);
+            $products->img_path = $newname;
+        }
+
+        $products->save();
+        return redirect()->route('product.index');
     }
 
     public function destroy($id)

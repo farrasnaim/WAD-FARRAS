@@ -15,10 +15,10 @@ class ordersController extends Controller
         return view('order',['product' => $product]);
     }
 
-    public function create()
+    public function create($id)
     {
-        $order = new order;
         $product = products::find($id);
+        return view('detailorder',['product' => $product]);
     }
 
     public function store(Request $request)

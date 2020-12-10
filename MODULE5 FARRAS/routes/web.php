@@ -10,7 +10,3 @@ Route::get('/', function () {
 
 Route::resource('/product', productsController::class);
 Route::resource('/order', ordersController::class);
-
-// Route::get('/product', [productsController::class, 'index']);
-// Route::get('/product/addproducts', [productsController::class, 'create']);
-// Route::post('/product/addproducts/submitproducts', [productsController::class, 'store']);

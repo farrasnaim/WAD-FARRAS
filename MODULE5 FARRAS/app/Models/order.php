@@ -9,6 +9,7 @@ class order extends Model
 {
     use HasFactory;
     protected $table = "orders";
+    protected $fillable = ['img_path', 'name', 'description', 'stock', 'price'];
     public function products(){
         return $this->belongsTo('App\Models\products','product_id','id');
 }
